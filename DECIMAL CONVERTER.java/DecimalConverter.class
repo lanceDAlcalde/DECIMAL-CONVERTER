@@ -1,0 +1,50 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.Scanner;
+
+public class DecimalConverter {
+   static Scanner scanner;
+
+   public DecimalConverter() {
+   }
+
+   public static void main(String[] var0) {
+      System.out.println("===CONVERTER===");
+      System.out.println("===============");
+      System.out.print("Input number: ");
+      int var1 = scanner.nextInt();
+      System.out.print("BINARY: ");
+      binary(var1);
+      System.out.print("HEXADECIMAL: ");
+      hexadecimal(var1);
+      System.out.print("OCTAL: ");
+      octal(var1);
+   }
+
+   public static void binary(int var0) {
+      if (var0 != 0) {
+         String var1 = Integer.toBinaryString(var0);
+         System.out.println(var1);
+      }
+
+   }
+
+   public static void hexadecimal(int var0) {
+      if (var0 != 0) {
+         String var1 = Integer.toHexString(var0);
+         System.out.println(var1);
+      }
+
+   }
+
+   public static void octal(int var0) {
+      if (var0 != 0) {
+         String var1 = Integer.toOctalString(var0);
+         System.out.println(var1);
+      }
+
+   }
+
+   static {
+      scanner = new Scanner(System.in);
+   }
+}
